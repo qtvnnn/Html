@@ -140,6 +140,10 @@ table {
     flex-flow: column;
 }
 
+table tr {
+    cursor: pointer;
+}
+
 table thead {
     width: calc(100% - 1.25em);
 }

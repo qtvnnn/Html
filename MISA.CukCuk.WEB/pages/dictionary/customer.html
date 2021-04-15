@@ -14,6 +14,7 @@
 
     <link rel='stylesheet' type='text/css' media='screen' href='/PT1/Html/MISA.CukCuk.WEB/css/common/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='/PT1/Html/MISA.CukCuk.WEB/css/common/layout.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/PT1/Html/MISA.CukCuk.WEB/css/common/dialog.css'>
     <link rel='stylesheet' type='text/css' media='screen'
         href='/PT1/Html/MISA.CukCuk.WEB/css/pages/dictionary/customer.css'>
 </head>
@@ -413,6 +414,91 @@
                 </footer>
             </div>
         </div>
+        <div id="dlgCustomerDetail" class="dialog dialog-hide">
+            <div class="model"></div>
+            <div class="dialog-content">
+                <div class="dialog-header form-group">
+                    <div class="dialog-title">THÔNG TIN KHÁCH HÀNG</div>
+                    <div class="dialog-close-button">&#x2715;</div>
+                </div>
+                <div class="dialog-body">
+                    <div class="row  form-group">
+                        <div class="col">
+                            <label>Mã khách hàng</label>
+                            <input class="form-control" id="txtCustomerCode" type="text" />
+                        </div>
+                        <div class="col">
+                            <label>Họ và tên</label>
+                            <input class="form-control" id="txtFullName" type="text" />
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col">
+                            <label>Giới tính</label>
+                            <select class="form-control" id='cbGender'>
+                                <option value="1">Nam</option>
+                                <option value="0">Nữ</option>
+                                <option value="2">Không xác định</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label>Ngày sinh</label>
+                            <input class="form-control" id="dtDateOfBirth" type="date" />
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col">
+                            <label>Số điện thoại</label>
+                            <input class="form-control" id="txtPhoneNumber" type="text" />
+                        </div>
+                        <div class="col">
+                            <label>Email</label>
+                            <input class="form-control" id="txtEmail" type="text" />
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col">
+                            <label>Chức vụ</label>
+                            <select class="form-control" id='txtPositionName'>
+                                <option value="3700cc49-55b5-69ea-4929-a2925c0f334d">Giám đốc</option>
+                                <option value="25c6c36e-1668-7d10-6e09-bf1378b8dc91">Thu ngân</option>
+                                <option value="148ed882-32b8-218e-9c20-39c2f00615e8">Nhân viên Marketting</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label>Phòng ban</label>
+                            <select class="form-control" id='txtDepartmentName'>
+                                <option value="469b3ece-744a-45d5-957d-e8c757976496">Phòng nhân sự</option>
+                                <option value="142cb08f-7c31-21fa-8e90-67245e8b283e">Phòng Marketting</option>
+                                <option value="17120d02-6ab5-3e43-18cb-66948daf6128">Phòng đào tạo</option>
+                                <option value="4e272fc4-7875-78d6-7d32-6a1673ffca7c">Phòng Công nghệ</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col">
+                            <label>Mức lương cơ bản</label>
+                            <input class="form-control" id="txtSalary" type="text" />
+                        </div>
+                        <div class="col">
+                            <label>Tình trạng công việc</label>
+                            <select class="form-control" id='cbWorkStatus'>
+                                <option value="0">Đã nghỉ việc</option>
+                                <option value="1">Thực tập sinh</option>
+                                <option value="2">Thử việc</option>
+                                <option value="3">Chính thức</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-footer">
+                    <input type="hidden" id="employeeId"/>
+                    <input type="hidden" id="typeRequest"/>
+                    <button id="btnDelete" class="btn btn-danger">Xóa</button>
+                    <button id="btnSave" class="btn btn-success">Lưu</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -425,6 +511,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
 
+    <script src="/PT1/Html/MISA.CukCuk.WEB/lib/jquery-3.6.0.min.js"></script>
     <script src="/PT1/Html/MISA.CukCuk.WEB/js/pages/dictionary/customer.js"></script>
 </body>
 
